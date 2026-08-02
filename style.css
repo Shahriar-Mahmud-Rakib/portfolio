@@ -496,6 +496,72 @@ section{
 }
 
 /* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications-section{
+    padding:100px 8%;
+    background:#0d1117;
+}
+
+.certifications-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.certification-card{
+    background:rgba(28, 35, 51, 0.4);
+    padding:30px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:all .3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.certification-card:hover{
+    transform:translateY(-8px);
+    border-color:#00d084;
+    box-shadow:0 10px 25px rgba(0,208,132,.2);
+}
+
+.certification-card h3{
+    color:#00d084;
+    margin-bottom:10px;
+    font-size:20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.certification-card h4{
+    color:#fff;
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.certification-card span{
+    color:#8892b0;
+    font-size:14px;
+    margin-bottom:20px;
+    display: block;
+}
+
+.cert-link {
+    margin-top: auto;
+    display: inline-block;
+    color: #00d084;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.cert-link:hover {
+    color: #fff;
+}
+
+/* =========================
    CONTACT
 ========================= */
 
