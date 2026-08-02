@@ -596,13 +596,14 @@ section{
     display:flex;
     gap:40px;
     text-align:left;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .contact-info{
     flex:1;
-    display:grid;
-    grid-template-columns:1fr;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap:25px;
 }
 
@@ -670,6 +671,10 @@ section{
     border-radius:15px;
     border:1px solid rgba(255,255,255,0.05);
     transition:all .3s ease;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-card:hover{
