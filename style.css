@@ -17,7 +17,7 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#0d1117;
+    background: radial-gradient(circle at center, #0f1923 0%, #06090e 100%);
     color:#fff;
     overflow-x:hidden;
 }
@@ -40,13 +40,16 @@ section{
     top:0;
     left:0;
     width:100%;
-    background:#161b22;
+    background:rgba(22, 27, 34, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
     z-index:1000;
     box-shadow:0 3px 15px rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
@@ -356,16 +359,34 @@ section{
    RESPONSIVE (ABOUT/SKILLS/EXP)
 ========================= */
 
-@media (max-width:768px){
+@media (max-width:991px){
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form-container {
+        width: 100%;
+    }
+
+    .contact-form .input-group {
+        flex-direction: column;
+    }
+
+    .hero-section{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
 
     .about-section,
     .skills-section,
     .experience-section{
         padding:70px 20px;
-    }
-
-    .section-title{
-        font-size:34px;
     }
 
     .about-container{
@@ -480,7 +501,7 @@ section{
 
 .contact-section{
     padding:100px 8%;
-    background:#0f1923;
+    background:transparent;
     text-align:center;
 }
 
@@ -491,17 +512,83 @@ section{
     line-height:1.7;
 }
 
-.contact-container{
+.contact-wrapper{
+    display:flex;
+    gap:40px;
+    text-align:left;
+    align-items: flex-start;
+}
+
+.contact-info{
+    flex:1;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.contact-form-container{
+    flex:1;
+    background: rgba(28, 35, 51, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form .input-group{
+    display:flex;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #0d1117;
+    border: 1px solid #21262d;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00d084;
+    box-shadow: 0 0 10px rgba(0, 208, 132, 0.2);
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 30px;
+}
+
+.contact-form .btn i {
+    margin-left: 8px;
 }
 
 .contact-card{
-    background:#1c2333;
-    padding:30px;
+    background:rgba(28, 35, 51, 0.8);
+    backdrop-filter: blur(5px);
+    padding:25px 30px;
     border-radius:15px;
-    border:1px solid #21262d;
+    border:1px solid rgba(255,255,255,0.05);
     transition:all .3s ease;
 }
 
@@ -517,20 +604,63 @@ section{
     font-size:22px;
 }
 
+.contact-card h3 i {
+    margin-right: 10px;
+}
+
 .contact-card p{
-    color:#ffffff;
-    line-height:1.8;
+    color:#cfcfcf;
+    font-size:16px;
 }
 
 .contact-card a{
-    color:#ffffff;
-    text-decoration:none;
-    word-break:break-word;
+    color:#cfcfcf;
     transition:.3s;
 }
 
 .contact-card a:hover{
     color:#00d084;
+}
+
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* Mobile */

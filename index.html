@@ -14,6 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -355,56 +356,60 @@
         and collaborations. Feel free to get in touch.
     </p>
 
-    <div class="contact-container">
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <p>
+                    <a href="mailto:smrakib.dev@gmail.com">
+                        smrakib.dev@gmail.com
+                    </a>
+                </p>
+            </div>
 
-        <div class="contact-card">
+            <div class="contact-card">
+                <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                <p>
+                    <a href="tel:+8801772173075">
+                        +88 01772173075
+                    </a>
+                </p>
+            </div>
 
-            <h3>📧 Email</h3>
+            <div class="contact-card">
+                <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/smrakib99/" target="_blank">
+                        linkedin.com/in/smrakib99
+                    </a>
+                </p>
+            </div>
 
-            <p>
-                <a href="mailto:smrakib.dev@gmail.com">
-                    smrakib.dev@gmail.com
-                </a>
-            </p>
-
+            <div class="contact-card">
+                <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+                <p>
+                    <a href="https://github.com/Shahriar-Mahmud-Rakib/" target="_blank">
+                        github.com/Shahriar-Mahmud-Rakib
+                    </a>
+                </p>
+            </div>
         </div>
 
-        <div class="contact-card">
+        <div class="contact-form-container">
+            <form action="https://formsubmit.co/67d3110e0a147b00186e471352924dd0" method="POST" class="contact-form">
+                <input type="hidden" name="_subject" value="New message from your Portfolio!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
 
-            <h3>📱 Phone</h3>
-
-            <p>
-                <a href="tel:+8801772173075">
-                    +88 01772173075
-                </a>
-            </p>
-
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
         </div>
-
-        <div class="contact-card">
-
-            <h3>💼 LinkedIn</h3>
-
-            <p>
-                <a href="https://www.linkedin.com/in/smrakib99/" target="_blank">
-                    linkedin.com/in/smrakib99
-                </a>
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <h3>💻 GitHub</h3>
-
-            <p>
-                <a href="https://github.com/Shahriar-Mahmud-Rakib/" target="_blank">
-                    github.com/Shahriar-Mahmud-Rakib
-                </a>
-            </p>
-
-        </div>
-
     </div>
 
 </section>
@@ -414,6 +419,10 @@
    <footer>
     <p>&copy; <span id="year"></span> Md. Rakibul Islam | SQA Engineer & Business Analyst</p>
 </footer>
+
+<a href="https://wa.me/8801772173075" target="_blank" class="whatsapp-btn">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script src="script.js"></script>
 
