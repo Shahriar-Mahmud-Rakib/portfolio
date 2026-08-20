@@ -1,0 +1,381 @@
+/* Modern Dark Portfolio CSS */
+:root {
+  --bg-dark: #1b0505;
+  --bg-gradient: linear-gradient(135deg, #2b0a0a 0%, #1b0505 100%);
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --gold-primary: #d4af37;
+  --gold-gradient: linear-gradient(90deg, #d4af37, #b8860b);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --card-radius: 20px;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+a {
+  color: var(--gold-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--card-radius);
+  padding: 30px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography Utilities */
+.text-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(27, 5, 5, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--text-main) !important;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-primary) !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  color: #fff;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-primary);
+  border: 2px solid var(--gold-primary);
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-gradient);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Sections */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* Social Links */
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--gold-primary);
+  font-size: 20px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--gold-gradient);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* Skills/Stats Section */
+.skill-bar {
+  margin-bottom: 25px;
+}
+
+.skill-bar .skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.skill-bar .progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.skill-bar .progress-bar {
+  background: var(--gold-gradient);
+  border-radius: 10px;
+  position: relative;
+}
+
+.skill-bar .progress-bar::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+/* Timeline / Experience */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold-gradient);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #1b0505;
+  border: 2px solid var(--gold-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  margin-bottom: 5px;
+  font-family: var(--font-body);
+}
+
+.timeline-item h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-primary);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.timeline-item ul {
+  padding-left: 20px;
+}
+
+.timeline-item ul li {
+  margin-bottom: 10px;
+}
+
+/* Project Cards */
+.project-card .glass-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Contact Form */
+.form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold-primary);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 50px;
+}
+
+.footer-socials {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Badges */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-primary);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
