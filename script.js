@@ -498,12 +498,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const themePaletteMenu = document.getElementById('theme-palette-menu');
   const themeOptions = document.querySelectorAll('.theme-opt');
 
-  // Load saved theme or default to 'indigo'
-  const savedTheme = localStorage.getItem('portfolio-theme') || 'indigo';
+  // Load saved theme or default to 'violet' (Cosmic Royal Violet)
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'violet';
   applyTheme(savedTheme);
 
   function applyTheme(themeName) {
-    if (themeName === 'indigo') {
+    if (themeName === 'violet') {
       document.documentElement.removeAttribute('data-theme');
     } else {
       document.documentElement.setAttribute('data-theme', themeName);

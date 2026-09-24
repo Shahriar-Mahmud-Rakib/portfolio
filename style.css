@@ -10,39 +10,39 @@
    1. CSS VARIABLES (DESIGN TOKENS & THEMES)
    ========================================================================== */
 :root {
-  /* Dynamic RGB Channels for Clean Alpha Transparency */
-  --accent-glow-rgb: 99, 102, 241;       /* Indigo */
-  --accent-secondary-rgb: 139, 92, 246;  /* Purple */
-  --accent-cyan-rgb: 6, 182, 212;        /* Sky / Cyan */
+  /* Dynamic RGB Channels (Default: Cosmic Royal Violet & Neon Purple) */
+  --accent-glow-rgb: 139, 92, 246;       /* Violet / Purple */
+  --accent-secondary-rgb: 168, 85, 247;  /* Light Violet */
+  --accent-cyan-rgb: 192, 132, 252;      /* Soft Iris */
 
-  /* Modern Theme Primary Accents (Default: Electric Indigo & Cyan) */
-  --accent-primary: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-blue: #3b82f6;
-  --accent-purple: #a855f7;
+  /* Modern Theme Primary Accents (Default: Cosmic Royal Violet) */
+  --accent-primary: #8b5cf6;
+  --accent-secondary: #a855f7;
+  --accent-cyan: #c084fc;
+  --accent-blue: #6366f1;
+  --accent-purple: #9333ea;
   --accent-amber: #f59e0b;
   --accent-rose: #f43f5e;
   --accent-emerald: #10b981;
 
   /* Gradient Sets */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-  --gradient-btn: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+  --gradient-primary: linear-gradient(135deg, #a855f7 0%, #8b5cf6 50%, #6366f1 100%);
+  --gradient-btn: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
 
-  /* Surface Colors (Sleek Slate Obsidian) */
-  --bg-dark: #080c14;
-  --bg-primary: #0d1322;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.72);
-  --bg-card-hover: rgba(26, 36, 58, 0.88);
-  --bg-glass: rgba(13, 19, 35, 0.7);
-  --bg-glass-strong: rgba(13, 19, 35, 0.92);
+  /* Surface Colors (Clean Deep Pitch Obsidian - No Grid/Scale) */
+  --bg-dark: #090a0f;
+  --bg-primary: #0e0f17;
+  --bg-secondary: #13141f;
+  --bg-card: #12131d;
+  --bg-card-hover: #171826;
+  --bg-glass: rgba(18, 19, 29, 0.85);
+  --bg-glass-strong: rgba(14, 15, 23, 0.95);
 
   /* Borders */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.12);
-  --border-hover: rgba(99, 102, 241, 0.45);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(139, 92, 246, 0.45);
 
   /* Text Hierarchy */
   --text-main: #f8fafc;
@@ -55,11 +55,11 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Elevation & Glow Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 15px rgba(var(--accent-glow-rgb), 0.08);
-  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 25px rgba(var(--accent-glow-rgb), 0.15);
-  --shadow-glow: 0 0 30px rgba(var(--accent-glow-rgb), 0.28);
-  --shadow-glow-cyan: 0 0 30px rgba(var(--accent-cyan-rgb), 0.28);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(var(--accent-glow-rgb), 0.1);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(var(--accent-glow-rgb), 0.18);
+  --shadow-glow: 0 0 30px rgba(var(--accent-glow-rgb), 0.3);
+  --shadow-glow-cyan: 0 0 30px rgba(var(--accent-cyan-rgb), 0.25);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,7 +73,35 @@
 /* ==========================================================================
    THEME VARIATIONS (DATA-THEME)
    ========================================================================== */
-/* Emerald Matrix / Tech Mint */
+/* Flame Orange / Modern Amber (Inspired by Reference UI) */
+[data-theme="orange"] {
+  --accent-glow-rgb: 255, 107, 0;
+  --accent-secondary-rgb: 249, 115, 22;
+  --accent-cyan-rgb: 251, 146, 60;
+  --accent-primary: #ff6b00;
+  --accent-secondary: #f97316;
+  --accent-cyan: #fb923c;
+  --gradient-primary: linear-gradient(135deg, #ff6b00 0%, #f97316 50%, #fbbf24 100%);
+  --gradient-btn: linear-gradient(135deg, #ff6b00 0%, #ea580c 100%);
+  --border-hover: rgba(255, 107, 0, 0.45);
+  --shadow-glow: 0 0 30px rgba(255, 107, 0, 0.3);
+}
+
+/* Electric Indigo & Cyan */
+[data-theme="indigo"] {
+  --accent-glow-rgb: 99, 102, 241;
+  --accent-secondary-rgb: 139, 92, 246;
+  --accent-cyan-rgb: 6, 182, 212;
+  --accent-primary: #6366f1;
+  --accent-secondary: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  --gradient-btn: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+  --border-hover: rgba(99, 102, 241, 0.45);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+/* Cyber Emerald Mint */
 [data-theme="emerald"] {
   --accent-glow-rgb: 16, 185, 129;
   --accent-secondary-rgb: 5, 150, 105;
@@ -84,21 +112,7 @@
   --gradient-primary: linear-gradient(135deg, #10b981 0%, #00f59b 50%, #06b6d4 100%);
   --gradient-btn: linear-gradient(135deg, #10b981 0%, #059669 100%);
   --border-hover: rgba(16, 185, 129, 0.45);
-  --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.28);
-}
-
-/* Cyber Violet & Pink */
-[data-theme="violet"] {
-  --accent-glow-rgb: 168, 85, 247;
-  --accent-secondary-rgb: 217, 70, 239;
-  --accent-cyan-rgb: 244, 63, 94;
-  --accent-primary: #a855f7;
-  --accent-secondary: #d946ef;
-  --accent-cyan: #f43f5e;
-  --gradient-primary: linear-gradient(135deg, #a855f7 0%, #d946ef 50%, #f43f5e 100%);
-  --gradient-btn: linear-gradient(135deg, #a855f7 0%, #c026d3 100%);
-  --border-hover: rgba(168, 85, 247, 0.45);
-  --shadow-glow: 0 0 30px rgba(168, 85, 247, 0.28);
+  --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.3);
 }
 
 /* Oceanic Azure & Sapphire */
@@ -112,25 +126,11 @@
   --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #6366f1 100%);
   --gradient-btn: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
   --border-hover: rgba(56, 189, 248, 0.45);
-  --shadow-glow: 0 0 30px rgba(2, 132, 199, 0.28);
-}
-
-/* Sunset Amber & Luxury Coral */
-[data-theme="sunset"] {
-  --accent-glow-rgb: 245, 158, 11;
-  --accent-secondary-rgb: 234, 88, 12;
-  --accent-cyan-rgb: 244, 63, 94;
-  --accent-primary: #f59e0b;
-  --accent-secondary: #ea580c;
-  --accent-cyan: #f43f5e;
-  --gradient-primary: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #f43f5e 100%);
-  --gradient-btn: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
-  --border-hover: rgba(245, 158, 11, 0.45);
-  --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.28);
+  --shadow-glow: 0 0 30px rgba(2, 132, 199, 0.3);
 }
 
 /* ==========================================================================
-   2. RESET & BASE
+   2. RESET & BASE (CLEAN PLAIN BACKGROUND - NO SCALE/GRID)
    ========================================================================== */
 *, *::before, *::after {
   margin: 0;
@@ -151,12 +151,9 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   position: relative;
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(var(--accent-glow-rgb), 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 85% 60%, rgba(var(--accent-cyan-rgb), 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(var(--accent-secondary-rgb), 0.06) 0%, transparent 45%);
-  background-attachment: fixed;
-  transition: background-color 0.4s ease;
+  /* Completely clean solid plain dark background */
+  background: var(--bg-dark);
+  transition: background-color 0.3s ease;
 }
 
 /* Custom Scrollbar */
@@ -167,7 +164,7 @@ body {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f293d;
+  background: #1e1f2b;
   border-radius: 5px;
   border: 2px solid var(--bg-dark);
 }
@@ -198,18 +195,6 @@ img {
 
 button, input, textarea {
   font-family: inherit;
-}
-
-/* Background Ambient Grid */
-.bg-grid {
-  position: fixed;
-  inset: 0;
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* Top Scroll Progress Indicator */
@@ -259,7 +244,6 @@ button, input, textarea {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 16px;
-  backdrop-filter: blur(10px);
   transition: var(--transition-fast);
 }
 
@@ -285,7 +269,7 @@ button, input, textarea {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 15%, var(--accent-primary) 65%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 80%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -296,11 +280,9 @@ button, input, textarea {
   -webkit-text-fill-color: transparent;
 }
 
-/* Glass Card Utility */
+/* Plain Sleek Dark Card */
 .glass-card {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: 18px;
   padding: 28px;
@@ -308,22 +290,6 @@ button, input, textarea {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-  transition: 0.6s;
-  pointer-events: none;
-}
-
-.glass-card:hover::before {
-  left: 100%;
 }
 
 .glass-card:hover {
@@ -352,23 +318,7 @@ button, input, textarea {
 .btn-primary {
   background: var(--gradient-btn);
   color: #ffffff;
-  box-shadow: 0 6px 22px -2px rgba(var(--accent-glow-rgb), 0.45);
-}
-
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
-  opacity: 0;
-  transition: var(--transition-fast);
-}
-
-.btn-primary:hover::after {
-  opacity: 1;
+  box-shadow: 0 6px 20px -2px rgba(var(--accent-glow-rgb), 0.45);
 }
 
 .btn-primary:hover {
@@ -381,7 +331,6 @@ button, input, textarea {
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   border: 1px solid var(--border-glass);
-  backdrop-filter: blur(12px);
 }
 
 .btn-secondary:hover {
@@ -540,7 +489,6 @@ button, input, textarea {
   font-weight: 600;
   color: var(--text-main);
   margin-bottom: 24px;
-  backdrop-filter: blur(10px);
 }
 
 .pulse-dot {
@@ -674,10 +622,10 @@ button, input, textarea {
 
 .avatar-glow {
   position: absolute;
-  inset: -15px;
+  inset: -20px;
   border-radius: 50%;
   background: var(--gradient-primary);
-  filter: blur(30px);
+  filter: blur(40px);
   opacity: 0.45;
   animation: spin-glow 12s linear infinite;
 }
@@ -694,7 +642,7 @@ button, input, textarea {
   border-radius: 50%;
   padding: 6px;
   background: var(--gradient-primary);
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(var(--accent-glow-rgb), 0.25);
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(var(--accent-glow-rgb), 0.35);
 }
 
 .avatar-img {
@@ -1664,7 +1612,6 @@ button, input, textarea {
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
   padding: 35px;
-  backdrop-filter: blur(16px);
 }
 
 .contact-form {
@@ -1694,7 +1641,7 @@ button, input, textarea {
 .form-control {
   width: 100%;
   padding: 14px 18px;
-  background: rgba(8, 12, 20, 0.8);
+  background: rgba(9, 10, 15, 0.9);
   border: 1px solid var(--border-subtle);
   border-radius: 10px;
   color: #ffffff;
@@ -1757,7 +1704,7 @@ textarea.form-control {
    13. FOOTER
    ========================================================================== */
 .footer {
-  background: #05080e;
+  background: #06070a;
   border-top: 1px solid var(--border-subtle);
   padding: 60px 0 30px;
 }
@@ -1851,7 +1798,7 @@ textarea.form-control {
   border: 1px solid var(--border-glass);
   border-radius: 16px;
   padding: 14px;
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   gap: 8px;
