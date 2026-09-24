@@ -491,4 +491,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  /* ==========================================================================
+     12. DYNAMIC COLOR THEME SWITCHER
+     ========================================================================== */
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const themePaletteMenu = document.getElementById('theme-palette-menu');
+  const themeOptions = document.querySelectorAll('.theme-opt');
+
+  // Load saved theme or default to 'indigo'
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'indigo';
+  applyTheme(savedTheme);
+
+  function applyTheme(themeName) {
+    if (themeName === 'indigo') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', themeName);
+    }
+    localStorage.setItem('portfolio-theme', themeName);
+
+    themeOptions.forEach(opt => {
+      if (opt.getAttribute('data-theme') === themeName) {
+        opt.classList.add('active');
+      } else {
+        opt.classList.remove('active');
+      }
+    });
+  }
+
+  if (themeToggleBtn && themePaletteMenu) {
+    themeToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      themePaletteMenu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!themePaletteMenu.contains(e.target) && e.target !== themeToggleBtn) {
+        themePaletteMenu.classList.remove('open');
+      }
+    });
+  }
+
+  themeOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      const theme = opt.getAttribute('data-theme');
+      applyTheme(theme);
+      if (themePaletteMenu) {
+        themePaletteMenu.classList.remove('open');
+      }
+      showToast(`Applied ${opt.querySelector('.theme-name')?.textContent || theme} theme!`);
+    });
+  });
+
 });
+
