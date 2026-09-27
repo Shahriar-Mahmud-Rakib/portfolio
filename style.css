@@ -225,7 +225,7 @@ body {
 }
 
 /* ==========================================================================
-   AMBIENT GLASSY MIRROR AURORA BACKGROUND
+   AMBIENT GLASSY MIRROR AURORA BACKGROUND (SMOOTH & GRID-FREE)
    ========================================================================== */
 .glass-bg-container {
   position: fixed;
@@ -237,18 +237,6 @@ body {
   z-index: -1;
   overflow: hidden;
   background-color: var(--bg-dark);
-}
-
-.glass-mesh-grid {
-  position: absolute;
-  inset: 0;
-  background-size: 38px 38px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 65%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 65%, transparent 100%);
-  opacity: 0.85;
 }
 
 .glass-glow-orb {
