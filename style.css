@@ -33,20 +33,20 @@
   --gradient-accent-text: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #38bdf8 100%);
   --gradient-card: linear-gradient(180deg, rgba(34, 36, 50, 0.75) 0%, rgba(24, 25, 36, 0.9) 100%);
 
-  /* Surface Colors (Premium Matte Charcoal / Slate — Inspired by Portfar & Liam Next.js Templates) */
-  --bg-dark: #121318;
-  --bg-primary: #171822;
-  --bg-secondary: #1c1d29;
-  --bg-card: rgba(26, 28, 40, 0.88);
-  --bg-card-hover: rgba(35, 38, 56, 0.96);
-  --bg-glass: rgba(22, 24, 34, 0.88);
-  --bg-glass-strong: rgba(18, 19, 27, 0.96);
+  /* Surface Colors (Premium Visible Matte Charcoal / Slate System — Inspired by Portfar & Liam Next.js Templates) */
+  --bg-dark: #1e222d;
+  --bg-primary: #242938;
+  --bg-secondary: #2b3143;
+  --bg-card: rgba(38, 44, 62, 0.88);
+  --bg-card-hover: rgba(48, 56, 78, 0.96);
+  --bg-glass: rgba(30, 34, 48, 0.88);
+  --bg-glass-strong: rgba(26, 30, 42, 0.96);
 
   /* High-Contrast Borders */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.13);
+  --border-subtle: rgba(255, 255, 255, 0.11);
+  --border-glass: rgba(255, 255, 255, 0.18);
   --border-hover: rgba(168, 85, 247, 0.55);
-  --border-card-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --border-card-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
 
   /* Crisp Text Hierarchy */
   --text-main: #f8fafc;
@@ -77,7 +77,7 @@
 /* ==========================================================================
    THEME PRESETS (DATA-THEME)
    ========================================================================== */
-/* Liam Luxury Gold Theme (High-Contrast Warm Amber/Gold from Next.js Reference) */
+/* Liam Luxury Gold Theme (High-Contrast Warm Amber/Gold on Petrol Slate) */
 [data-theme="gold"], [data-theme="amber"] {
   --accent-glow-rgb: 245, 183, 0;
   --accent-secondary-rgb: 251, 191, 36;
@@ -90,11 +90,18 @@
   --gradient-btn: linear-gradient(135deg, #f5b700 0%, #d97706 100%);
   --gradient-heading: linear-gradient(135deg, #ffffff 30%, #fef3c7 70%, #fde047 100%);
   --gradient-accent-text: linear-gradient(135deg, #fde047 0%, #f5b700 50%, #fbbf24 100%);
+  --bg-dark: #192329;
+  --bg-primary: #1f2c34;
+  --bg-secondary: #273741;
+  --bg-card: rgba(33, 47, 56, 0.88);
+  --bg-card-hover: rgba(43, 61, 72, 0.96);
+  --bg-glass: rgba(27, 38, 45, 0.88);
+  --bg-glass-strong: rgba(23, 33, 39, 0.96);
   --border-hover: rgba(245, 183, 0, 0.55);
   --shadow-glow: 0 0 35px rgba(245, 183, 0, 0.35);
 }
 
-/* Flame Orange Theme (High Contrast Ember) */
+/* Flame Orange Theme (Warm Charcoal Gray) */
 [data-theme="orange"] {
   --accent-glow-rgb: 255, 107, 0;
   --accent-secondary-rgb: 249, 115, 22;
@@ -107,6 +114,13 @@
   --gradient-btn: linear-gradient(135deg, #ff6b00 0%, #ea580c 100%);
   --gradient-heading: linear-gradient(135deg, #ffffff 30%, #fed7aa 70%, #fb923c 100%);
   --gradient-accent-text: linear-gradient(135deg, #ff6b00 0%, #fb923c 50%, #fbbf24 100%);
+  --bg-dark: #221f1d;
+  --bg-primary: #2a2624;
+  --bg-secondary: #332e2b;
+  --bg-card: rgba(44, 39, 36, 0.88);
+  --bg-card-hover: rgba(56, 50, 46, 0.96);
+  --bg-glass: rgba(36, 32, 29, 0.88);
+  --bg-glass-strong: rgba(30, 27, 25, 0.96);
   --border-hover: rgba(255, 107, 0, 0.55);
   --shadow-glow: 0 0 35px rgba(255, 107, 0, 0.35);
 }
@@ -124,6 +138,13 @@
   --gradient-btn: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
   --gradient-heading: linear-gradient(135deg, #ffffff 30%, #c7d2fe 70%, #a5b4fc 100%);
   --gradient-accent-text: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%);
+  --bg-dark: #1b2031;
+  --bg-primary: #22283e;
+  --bg-secondary: #29314b;
+  --bg-card: rgba(36, 43, 67, 0.88);
+  --bg-card-hover: rgba(46, 55, 85, 0.96);
+  --bg-glass: rgba(29, 35, 54, 0.88);
+  --bg-glass-strong: rgba(24, 29, 45, 0.96);
   --border-hover: rgba(99, 102, 241, 0.55);
   --shadow-glow: 0 0 35px rgba(99, 102, 241, 0.35);
 }
@@ -141,6 +162,13 @@
   --gradient-btn: linear-gradient(135deg, #10b981 0%, #059669 100%);
   --gradient-heading: linear-gradient(135deg, #ffffff 30%, #a7f3d0 70%, #6ee7b7 100%);
   --gradient-accent-text: linear-gradient(135deg, #34d399 0%, #10b981 50%, #06b6d4 100%);
+  --bg-dark: #182422;
+  --bg-primary: #1f2f2c;
+  --bg-secondary: #263b37;
+  --bg-card: rgba(33, 52, 48, 0.88);
+  --bg-card-hover: rgba(43, 67, 62, 0.96);
+  --bg-glass: rgba(26, 41, 38, 0.88);
+  --bg-glass-strong: rgba(21, 34, 31, 0.96);
   --border-hover: rgba(16, 185, 129, 0.55);
   --shadow-glow: 0 0 35px rgba(16, 185, 129, 0.35);
 }
@@ -158,6 +186,13 @@
   --gradient-btn: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
   --gradient-heading: linear-gradient(135deg, #ffffff 30%, #bae6fd 70%, #7dd3fc 100%);
   --gradient-accent-text: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #818cf8 100%);
+  --bg-dark: #16222f;
+  --bg-primary: #1c2b3c;
+  --bg-secondary: #23364b;
+  --bg-card: rgba(31, 48, 66, 0.88);
+  --bg-card-hover: rgba(40, 62, 85, 0.96);
+  --bg-glass: rgba(24, 38, 52, 0.88);
+  --bg-glass-strong: rgba(19, 31, 43, 0.96);
   --border-hover: rgba(56, 189, 248, 0.55);
   --shadow-glow: 0 0 35px rgba(2, 132, 199, 0.35);
 }
@@ -185,9 +220,9 @@ body {
   overflow-x: hidden;
   position: relative;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(var(--accent-glow-rgb), 0.12), transparent 70%),
-    radial-gradient(circle at 95% 35%, rgba(var(--accent-cyan-rgb), 0.04), transparent 45%),
-    radial-gradient(circle at 5% 75%, rgba(var(--accent-glow-rgb), 0.04), transparent 45%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(var(--accent-glow-rgb), 0.16), transparent 70%),
+    radial-gradient(circle at 95% 35%, rgba(var(--accent-cyan-rgb), 0.08), transparent 45%),
+    radial-gradient(circle at 5% 75%, rgba(var(--accent-glow-rgb), 0.08), transparent 45%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   transition: background-color 0.3s ease;
@@ -201,7 +236,7 @@ body {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2b2d3d;
+  background: #3b4258;
   border-radius: 5px;
   border: 2px solid var(--bg-dark);
 }
@@ -1837,7 +1872,7 @@ textarea.form-control {
    13. FOOTER
    ========================================================================== */
 .footer {
-  background: #0f1016;
+  background: var(--bg-primary);
   border-top: 1px solid var(--border-subtle);
   padding: 60px 0 30px;
 }
